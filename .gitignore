@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files (too large for git)
+data/
+
+# Model files - exclude large ones, only keep artifacts/best_model.keras
+models/*.keras
+*.keras
+!artifacts/best_model.keras
+
+# Results/images (not needed for deployment)
+results/
+images/
+
+# OS
+.DS_Store
+*.zip
+
+# IDE
+.vscode/
+.idea/
+
