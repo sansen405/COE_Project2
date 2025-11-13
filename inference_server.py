@@ -94,6 +94,7 @@ def inference():
         
         # Predict
         prob = float(model.predict(x, verbose=0).ravel()[0])
+        # Model outputs probability of "no_damage", so invert for "damage"
         label = "no_damage" if prob >= 0.5 else "damage"
         
         # Return exact format required by grader
