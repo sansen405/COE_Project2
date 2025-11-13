@@ -1,32 +1,5 @@
-# Ignore everything by default
-*
-
-# But keep these:
-!.gitignore
-!artifacts/
-!artifacts/**
-!docker-compose.yml
-!Dockerfile
-!inference_server.py
-!requirements.txt
-!requirements.py
-!README.md
-!grader.py
-!start_grader.sh
-!data/
-!data/**
-
-# Re-ignore heavy model binaries even inside artifacts
-artifacts/**/*.keras
-artifacts/**/*.h5
-artifacts/**/*.ckpt
-artifacts/**/checkpoint
-
-# Allow the primary model file
-!artifacts/best_model.keras
-
-# Never track any top-level or nested models directory
+images/
 models/
-**/models/
-
-
+results/
+t_data/
+.gitignore

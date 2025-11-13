@@ -6,7 +6,6 @@ import json
 import numpy as np
 import tf_keras as keras
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARTIFACTS_DIR = os.path.join(BASE_DIR, "artifacts")
 MODEL_FILE = os.path.join(ARTIFACTS_DIR, "best_model.keras")
@@ -14,7 +13,6 @@ PREPROCESSING_FILE = os.path.join(ARTIFACTS_DIR, "preprocessing.json")
 MODEL_CARD_FILE = os.path.join(ARTIFACTS_DIR, "model_card.json")
 
 app = Flask(__name__)
-
 best_model = keras.models.load_model(MODEL_FILE)
 
 with open(PREPROCESSING_FILE, "r") as ppfile:
@@ -26,7 +24,6 @@ with open(MODEL_CARD_FILE, "r") as mcfile:
 WIDTH = preprocessing_config["img_size"][0]
 HEIGHT = preprocessing_config["img_size"][1]
 SCALE = preprocessing_config["scale"]
-
 
 @app.route("/summary", methods=["GET"])
 def get_summary():
